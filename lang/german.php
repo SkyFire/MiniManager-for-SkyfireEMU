@@ -9,7 +9,7 @@
 
 $lang_global = array(
   // ----- GENERAL ERROR CODES -----
-  'err_sql_conn_db' => 'Fehler - Keiner Verbindung zur Datenbank!',
+  'err_sql_conn_db' => 'Fehler - Keine Verbindung zur Datenbank!',
   'err_sql_open_db' => 'Fehler - Kann Datenbank nicht &ouml;ffnen!',
   'err_no_result' => 'Keine Ergebnisse.',
   'err_no_user' => 'Keine Benutzer gefunden!',
@@ -26,15 +26,15 @@ $lang_global = array(
   'home' => 'Home',
   'none' => 'nichts',
   'delete' => 'l&ouml;schen',
-  'delete_short' => 'Del.',
+  'delete_short' => 'L&ouml;sch.',
   'edit' => 'Bearbeiten',
   'yes' => 'JA',
   'yes_low' => 'Ja',
   'no' => 'NEIN',
   'no_low' => 'Nein',
-  'are_you_sure' => 'BIST DU SICHER?',
-  'will_be_erased' => 'Wird unwiederruflich aus der Datenbank gelöscht!',
-  'unlinked' => 'Unverlinked',
+  'are_you_sure' => 'Bist du dir sicher?',
+  'will_be_erased' => 'Wird unwiderruflich aus der Datenbank gel&ouml;scht!',
+  'unlinked' => 'Nickt verlinkt',
   'country' => 'Land',
   'language_select' => 'W&auml;hle Sprache',
   'language_0' => 'Englisch',
@@ -55,7 +55,7 @@ function lang_verify()
   $lang_verify = array
   (
   'verify_failed' => 'Verifizierung fehlgeschlagen!',
-  'verify_success' => 'Verifizierung erfolgreich. Du kannst dich jetzt mit deinem Account einloggen!'
+  'verify_success' => 'Verifizierung erfolgreich. Du kannst dich jetzt mit deinem Account anmelden!'
   );
   return $lang_verify;
 }
@@ -64,21 +64,21 @@ function lang_login()
 {
   $lang_login = array
   (
-  'login' => 'Einloggen',
-  'username' => 'Username',
+  'login' => 'Anmelden',
+  'username' => 'Benutzername',
   'password' => 'Passwort',
   'not_registrated' => 'Nicht registriert?',
   'bad_pass_user' => 'Ung&uuml;ltiger Benutzername und/oder Passwort!',
   'missing_pass_user' => 'Fehlender Benutzername und/oder Passwort!',
-  'banned_acc' => 'Account gebannt, Bitte Serveradministrator kontaktieren',
-  'locked_acc' => 'Account gesperrt, Bitte Serveradministrator kontaktieren',
-  'no_permision' => 'Du hast KEINE Berechtigung auf die angeforderten Daten zuzugreifen',
+  'banned_acc' => 'Account gebannt. Bitte Serveradministrator kontaktieren',
+  'locked_acc' => 'Account gesperrt. Bitte Serveradministrator kontaktieren',
+  'no_permision' => 'Du hast keine Berechtigung, auf die angeforderten Daten zuzugreifen',
   'enter_valid_logon' => 'Bitte einen g&uuml;ltigen Benutzernamen und ein g&uuml;ltiges Passwort eingeben:',
   'select_realm' => 'W&auml;hle einen Realm',
-  'remember_me' => 'Eingeloggt bleiben',
+  'remember_me' => 'Angemeldet bleiben',
   'pass_recovery' => 'Passwort vergessen?',
   'verify_required' => 'Dein Account muss verifiziert werden. Bitte &uuml;berpr&uuml;fe deine E-Mails!',
-  'after_registration' => 'Ihr Benutzername wurde erfolgreich angelegt!',
+  'after_registration' => 'Dein Benutzerkonto wurde erfolgreich angelegt!',
   );
   return $lang_login;
 }
@@ -103,7 +103,7 @@ function lang_guild()
   'by_id' => 'nach ID',
   'browse_guilds' => 'Gilden durchsuchen',
   'tot_members' => 'Mitglieder insgesammt',
-  'remove' => 'L&ouml;.',
+  'remove' => 'L&ouml;schen',
   'tot_guilds' => 'Gilden insgesamt',
   'guild' => 'Gilde',
   'info' => 'Info',
@@ -117,11 +117,11 @@ function lang_guild()
   'offnote' => 'Notiz',
   'online' => 'online',
   'llogin' => 'Letzter Login (Tage)',
-  'del_guild' => 'L&ouml;sche Gilde',
+  'del_guild' => 'Gilde l&ouml;schen',
   'guild_id' => 'Gilden-ID',
   'guild_search_result' => 'Gilden-Suchergebnis',
   'guildbank' => 'Gildenbank',
-  'members' => 'Members',
+  'members' => 'Mitglieder',
   );
   return $lang_guild;
 }
@@ -134,7 +134,7 @@ function lang_guildbank()
   (
   'guild' => 'Gilde',
   'guildbank' => 'Gildenbank',
-  'tab' => 'Tab',
+  'tab' => 'Reiter',
   'notfound' => 'Falsche ID, keine Gildenbank gefunden.',
   );
   return $lang_guildbank;
@@ -143,35 +143,35 @@ function lang_guildbank()
 
 $lang_register = array(
   // ----- REGISTER.PHP -----
-  'create_acc' => 'Accounterstellung',
+  'create_acc' => 'Registration',
   'username' => 'Benutzername',
   'use_eng_chars_limited_len' => 'Nur Buchstaben und Zahlen benutzen (keine Umlaute oder Sonderzeichen). Minimale L&auml;nge: 4 | Maximale L&auml;nge: 14',
   'password' => 'Passwort',
   'confirm_password' => 'Passwort best&auml;tigen',
   'min_pass_len' => 'Minimale L&auml;nge 4 | Maximale L&auml;nge 25',
   'email' => 'E-Mail',
-  'use_valid_mail' => 'Bitte versichere dich, dass du eine g&uuml;ltige E-Mail-Adresse eingibst.',
+  'use_valid_mail' => 'Bitte versichere, dass du eine g&uuml;ltige E-Mail-Adresse eingibst.',
   'create_acc_button' => 'Account erstellen',
-  'diff_pass_entered' => 'Die Passwörter müssen übereinstimmen.', //Popup-Fenster mit "normalen" Umlauten!
+  'diff_pass_entered' => 'Die Passw&ouml;rter müssen übereinstimmen.', //Popup-Fenster mit "normalen" Umlauten!
   'already_exist' => 'existiert bereits',
-  'acc_reg_closed' => 'Pech gehabt, die Accounterstellung ist zur Zeit deaktiviert.',
+  'acc_reg_closed' => 'Leider ist die Registrierung vor&uuml;bergehend deaktiviert.',
   'wrong_pass_username_size' => 'Du hast die L&auml;nge des Benutzernamens / des Passworts nicht beachtet!',
   'bad_chars_used' => 'Der Benutzername darf nur Buchstaben und Zahlen enthalten!',
-  'invalid_email' => 'Bitte eine G&Uuml;LTIGE E-Mail-Adresse angeben!',
-  'banned_ip' => 'Deine IP-Addresse ist gebannt.',
+  'invalid_email' => 'Bitte eine G&uuml;ltige E-Mail-Adresse angeben!',
+  'banned_ip' => 'Deine IP-Addresse wurde gebannt.',
   'contact_serv_admin' => 'Kontaktiere den Serveradministrator.',
   'users_ip_range' => 'Benutzer im IP-Bereich',
-  'cannot_create_acc' => 'k&ouml;nnen keine Accounts erstellen.',
+  'cannot_create_acc' => 'Registration fehlgeschlagen.',
   'fill_all_fields' => 'Bitte alle Felder ausf&uuml;llen.',
-  'acc_type' => 'Spieltyp',
+  'acc_type' => 'Erweiterung',
   'acc_type_desc' => 'Welches Addon m&ouml;chtest du aktivieren? Du kannst diese Option sp&auml;ter jederzeit &auml;ndern.',
   'classic' => 'Klassisch',
   'tbc' => 'TBC',
   'wotlk' => 'WotLK',
   'cata' => 'Cataclysm',
-  'recover_acc_password' => 'Passwortwiederherstellung f&uuml;r einen Account',
+  'recover_acc_password' => 'Passwortwiederherstellung f&uuml;r ein Benutzerkonto',
   'user_pass_rec_desc' => 'Bitte gib den Benutzernamen an mit dem du dich registriert hast.',
-  'mail_pass_rec_desc' => 'Versichere dich, dass du die selbe E-Mail-Adresse wie bei deiner Anmeldung verwendest.',
+  'mail_pass_rec_desc' => 'Versichere, dass du die selbe E-Mail-Adresse wie bei deiner Anmeldung verwendest.',
   'recover_pass' => 'Passwort wiederherstellen',
   'user_mail_not_found' => 'Die angegebene Kombination aus Accountname und E-Mail-Adresse wurde nicht gefunden.',
   'recovery_mail_sent' => 'E-Mail zur Wiederherstellung des Passwortes wurde versandt.',
@@ -181,13 +181,14 @@ $lang_register = array(
   'i_agree' => 'Ich bin einverstanden',
   'i_dont_agree' => 'Ich bin nicht einverstanden',
   'pass_too_long' => 'Das angegebene Passwort &uuml;berschreitet die maximal erlaube L&auml;nge',
-  'account_needs_verified' => 'That account is already registered and awaiting verification!',   // TODO
+  'account_needs_verified' => 'Dieses Benutzerkonto existiert bereits, muss aber noch freigeschaltet werden!',
   'invited_by' => 'Geworben von',
-  'invited_info' => 'Wenn dich ein anderer Spieler geworben hat, gib hier seinen Accountnamen an.',
-  'email_address_used' => 'Diese Mailadresse hat schon einen Account.',
-  'referrer_not_found' => 'Der Account des Spielers, der dich geworben hat, wurde nicht gefunden.<br/>Stelle bitte sicher, dass du einen g&uuml;ltigen Accountnamen eingegeben hast.',
+  'invited_info' => 'Wenn dich ein anderer Spieler geworben hat, gib hier seinen Benutzernamen an.',
+  'email_address_used' => 'Die E-Mail-Adresse wird bereits benutzt.',
+  'referrer_not_found' => 'Der Spieler, der dich geworben hat, wurde nicht gefunden.<br/>Stelle bitte sicher, dass du einen g&uuml;ltigen Benutzernamen eingegeben hast.',
   );
 
+/** TODO -- Stand: 31.5.2012 - 17:57 Uhr **/
 
 // ----- INDEX.PHP -----
 function lang_index()
