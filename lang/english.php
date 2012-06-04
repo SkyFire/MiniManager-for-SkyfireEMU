@@ -815,7 +815,7 @@ function lang_edit()
     'language' => 'Language',
     'select_layout_lang' => 'Select the layout language',
     'theme' => 'Theme',
-    'use_valid_email' => 'Tty providing a VALID Email Address!',
+    'use_valid_email' => 'Try providing a VALID Email Address!',
     'data_updated' => 'Update action success!',
     'error_updating' => 'Update action Error! - Non of the fields changed?',
     'del_error' => 'Unexpected Delete Error.',
