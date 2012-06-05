@@ -246,6 +246,7 @@ function lang_header()
     'characters' => 'Characters',
     'command' => 'Commands',
     'mail' => 'Mail',
+    'mail_on' => 'Ingame mail',
     'tickets' => 'Tickets',
     'banned_list' => 'Banned List',
     'cleanup' => 'Cleanup',
@@ -858,13 +859,13 @@ function lang_mail()
     'use_currect_option' => 'Some of the \'Group Send\' options can be used only with \'inGame mail\' or \'Email\' but not with both.',
     'send_mail' => 'Send Mail',
     'result' => 'InGame Mail Result',
-	'mail_on' => 'Ingame Mail',
-	'sender' => 'Sender',
-	'receiver' => 'Receiver',
-	'has_items' => 'Has Items',
-	'text' => 'Text',
-	'checked' => 'Checked',
-	'id' => 'ID',
+    'mail_on' => 'Ingame Mail',
+    'sender' => 'Sender',
+    'receiver' => 'Receiver',
+    'has_items' => 'Has Items',
+    'text' => 'Text',
+    'checked' => 'Checked',
+    'id' => 'ID',
   );
   return $lang_mail;
 }
