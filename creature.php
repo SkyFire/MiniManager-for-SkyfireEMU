@@ -774,7 +774,7 @@ function do_insert_update($do_insert)
         $result1 = $sql->query("SELECT COUNT(*) FROM creature WHERE id = '{$mob['entry']}'");
         $output .= "
                                         <tr>
-                                            <td colspan=\"6\">{$lang_creature['creature_swapned']} : ".$sql->result($result1, 0)." {$lang_creature['times']}.</td>
+                                            <td colspan=\"6\">{$lang_creature['creature_spawned']} : ".$sql->result($result1, 0)." {$lang_creature['times']}.</td>
                                         </tr>
                                     </table>
                                     <br /><br />
