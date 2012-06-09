@@ -212,7 +212,7 @@ function lang_index()
     'latency' => 'Latency',
     'a_latency' => 'Average Latency',
     'guild' => 'Guild',
-    'trinity_rev' => 'Trinity Revision:',
+    'skyfire_rev' => 'SkyFire Revision:',
     'using_db' => 'Database Version:',
     'maxplayers' => 'Max players this uptime session',
   );
