@@ -20,10 +20,10 @@ function browse_tickets(&$sqlc)
     else 
         $start=0;
 
-    $order_by = (isset($_GET['order_by'])) ? $sqlc->quote_smart($_GET['order_by']) : 'closed';
+    $order_by = (isset($_GET['order_by'])) ? $sqlc->quote_smart($_GET['order_by']) : 'closedBy';
     if (preg_match('/^[_[:lower:]]{1,10}$/', $order_by)); 
     else 
-        $order_by = 'closed';
+        $order_by = 'closedBy';
 
     $dir = (isset($_GET['dir'])) ? $sqlc->quote_smart($_GET['dir']) : 1;
     if (preg_match('/^[01]{1}$/', $dir)); 
@@ -39,13 +39,13 @@ function browse_tickets(&$sqlc)
     $all_record = $sqlc->result($query_1,0);
     unset($query_1);
     //get unread ticket count
-    $query_2 = $sqlc->query('SELECT count(*) FROM gm_tickets WHERE closed = 0');
+    $query_2 = $sqlc->query('SELECT count(*) FROM gm_tickets WHERE closedBy = 0');
     $new_record = $sqlc->result($query_2,0);
     unset($query_2);
 
-    $query = $sqlc->query("SELECT gm_tickets.guid, gm_tickets.playerGuid, gm_tickets.closed, SUBSTRING_INDEX(gm_tickets.message,' ',6), characters.name, characters.online
+    $query = $sqlc->query("SELECT gm_tickets.guid, gm_tickets.Guid, gm_tickets.closedBy, SUBSTRING_INDEX(gm_tickets.message,' ',6), characters.name, characters.online
                             FROM gm_tickets,characters
-                                WHERE gm_tickets.playerGuid = characters.guid
+                                WHERE gm_tickets.Guid = characters.guid
                                   ORDER BY $order_by $order_dir LIMIT $start, $itemperpage");
 
     $output .="
