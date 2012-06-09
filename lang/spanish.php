@@ -213,7 +213,7 @@ function lang_index()
     'latency' => 'Latencia',
     'a_latency' => 'Latencia media',
     'guild' => 'Hermandad',
-    'trinity_rev' => 'Trinity Rev:',
+    'skyfire_rev' => 'Trinity Rev:',
     'using_db' => 'Utilizando la versión de DB:',
     'maxplayers' => 'Número máximo de jugadores de este periodo de tiempo de actividad',
   );
