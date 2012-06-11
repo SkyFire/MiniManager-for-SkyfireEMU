@@ -49,6 +49,6 @@ if ($l_rev)
         $output .='Latest revision of MiniManager is r'.$l_rev.'<br />Please update to latest revision before posting any bug reports.<br /><br />';
 }
 unset($l_rev);
-$output .= 'Copy the selected text below and paste it in your bug report.<br /><br /><textarea id="codearea" readonly="readonly" rows="'.($result ? '22' : '12').'" cols="80">'.$doutput.'</textarea><br /><br /><a href="http://www.trinityscripts.xe.cx/tracker/" target="_blank">Report a bug: http://www.trinityscripts.xe.cx/tracker/<br />(link opens in new tab/window)</a><br /><br /><script type="text/javascript">document.getElementById(\'codearea\').focus(); document.getElementById(\'codearea\').select(); </script></center>';
+$output .= 'Copy the selected text below and paste it in your bug report.<br /><br /><textarea id="codearea" readonly="readonly" rows="'.($result ? '22' : '12').'" cols="80">'.$doutput.'</textarea><br /><br /><a href="https://github.com/Mythos94/MiniManager-for-SkyfireEMU/issues" target="_blank">Report a bug: https://github.com/Mythos94/MiniManager-for-SkyfireEMU/issues<br />(link opens in new tab/window)</a><br /><br /><script type="text/javascript">document.getElementById(\'codearea\').focus(); document.getElementById(\'codearea\').select(); </script></center>';
 require_once 'footer.php';
 ?>
