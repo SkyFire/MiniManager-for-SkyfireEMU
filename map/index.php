@@ -13,7 +13,7 @@
     2006-2009 Modified by killdozer.
 */
 
-require_once("pomm_conf.php");
+require_once("pommfs_conf.php");
 require_once("func.php");
 
 if (file_exists("map_".$lang.".php") && file_exists("zone_names_".$lang.".php"))
@@ -863,7 +863,7 @@ function load_data()
       show(req.responseJS.online);
     }
   }
-  req.open('GET', 'pomm_play.php', true);
+  req.open('GET', 'pommfs_play.php', true);
   req.send({ });
 }
 

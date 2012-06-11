@@ -14,7 +14,7 @@
     $sql = new SQL;
     $sql->connect($mmfpm_db['addr'], $mmfpm_db['user'], $mmfpm_db['pass'], $mmfpm_db['name']);
     
-    $query = $sql->query("SELECT `id`, `username`, `sha_pass_hash`, `email`, `joindate`, `last_ip`, `failed_logins`, `locked`, `last_login`, `expansion` FROM mm_account WHERE username = '$username' AND authkey = '$authkey'");
+    $query = $sql->query("SELECT `id`, `username`, `sha_pass_hash`, `email`, `joindate`, `last_ip`, `failed_logins`, `locked`, `last_login`, `expansion` FROM mmfs_account WHERE username = '$username' AND authkey = '$authkey'");
     
     $lang_verify = lang_verify();
     
@@ -32,7 +32,7 @@
         $result = $sql2->query("SELECT * FROM account WHERE username='$username'");
         $data = mysql_fetch_assoc($result); 
         $sql2->query("INSERT INTO account_access (`id`,`gmlevel`) VALUES ('{$data['id']}','0')");
-        $sql->query("DELETE FROM mm_account WHERE username='$username'");
+        $sql->query("DELETE FROM mmfs_account WHERE username='$username'");
     }
     
     $output .= "</div>";

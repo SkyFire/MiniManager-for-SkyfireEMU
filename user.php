@@ -792,7 +792,7 @@ function edit_user()
     $result = $sqlr->query("SELECT IFNULL(`account_access`.`gmlevel`,0) as `gmlevel`, `account`.* FROM account LEFT JOIN account_access ON account.id=account_access.id WHERE account.id = '$id'");
     $data = $sqlr->fetch_assoc($result);
 
-    $refguid = $sqlm->fetch_assoc($sqlm->query('SELECT InvitedBy FROM mm_point_system_invites WHERE PlayersAccount = '.$data['id'].''));
+    $refguid = $sqlm->fetch_assoc($sqlm->query('SELECT InvitedBy FROM mmfs_point_system_invites WHERE PlayersAccount = '.$data['id'].''));
     $refguid = $refguid['InvitedBy'];
     $referred_by = $sqlc->fetch_assoc($sqlc->query("SELECT name FROM characters WHERE guid = '$refguid'"));
     unset($refguid);
@@ -1198,7 +1198,7 @@ function doupdate_referral($referredby, $user_id)
     $sqlr = new SQL;
     $sqlr->connect($realm_db['addr'], $realm_db['user'], $realm_db['pass'], $realm_db['name']);
 
-    $result = $sqlm->fetch_row($sqlm->query("SELECT InvitedBy FROM mm_point_system_invites WHERE PlayersAccount = '$user_id'"));
+    $result = $sqlm->fetch_row($sqlm->query("SELECT InvitedBy FROM mmfs_point_system_invites WHERE PlayersAccount = '$user_id'"));
     $result = $result[0];
 
     if ($result == NULL)
@@ -1213,7 +1213,7 @@ function doupdate_referral($referredby, $user_id)
             $result = $result[0];
             if ($result != $user_id)
             {
-                $sqlm->query("INSERT INTO mm_point_system_invites (PlayersAccount, InvitedBy, InviterAccount) VALUES ('$user_id', '$referred_by', '$result')");
+                $sqlm->query("INSERT INTO mmfs_point_system_invites (PlayersAccount, InvitedBy, InviterAccount) VALUES ('$user_id', '$referred_by', '$result')");
                 return true;
             }
             else

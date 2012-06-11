@@ -56,9 +56,9 @@ function repair_form()
                                 </tr>
                             </table>';
     $sql = new SQL;
-    $mm_dbs=array($realm_db, $mmfpm_db);
+    $mmfs_dbs=array($realm_db, $mmfpm_db);
     
-    foreach ($mm_dbs as $db)
+    foreach ($mmfs_dbs as $db)
     {
         $output.= '
                             <table style="width: 550px;" class="lined">
@@ -92,9 +92,9 @@ function repair_form()
         $output .= '
                             </table>';
     }
-    $mm_dbs=array($world_db, $characters_db);
+    $mmfs_dbs=array($world_db, $characters_db);
     
-    foreach ($mm_dbs as $dbs)
+    foreach ($mmfs_dbs as $dbs)
     {
         foreach ($dbs as $dbr => $db)
         {
@@ -137,7 +137,7 @@ function repair_form()
     unset($result2);
     unset($result1);
     unset($table);
-    unset($mm_dbs);
+    unset($mmfs_dbs);
     
     $output .= '
                         </form>

@@ -183,7 +183,7 @@ function doregister(){
         {
             $sql2 = new SQL;
             $sql2->connect($mmfpm_db['addr'], $mmfpm_db['user'], $mmfpm_db['pass'], $mmfpm_db['name']);
-            $query2_result = $sql2->query("SELECT * FROM mm_account WHERE username = '$user_name' OR email = '$mail'");
+            $query2_result = $sql2->query("SELECT * FROM mmfs_account WHERE username = '$user_name' OR email = '$mail'");
             
             if ($sql2->num_rows($query2_result) > 0) 
               redirect("register.php?err=15");
@@ -191,7 +191,7 @@ function doregister(){
             {
                 $client_ip = $_SERVER['REMOTE_ADDR'];
                 $authkey = sha1($client_ip . time());
-                $result = $sql2->query("INSERT INTO mm_account (username,sha_pass_hash,email, joindate,last_ip,failed_logins,locked,last_login,expansion,authkey)
+                $result = $sql2->query("INSERT INTO mmfs_account (username,sha_pass_hash,email, joindate,last_ip,failed_logins,locked,last_login,expansion,authkey)
                                         VALUES (UPPER('$user_name'),'$pass','$mail',now(),'$last_ip','0','$create_acc_locked',NULL,'$expansion','$authkey')");
                 do_verify_email($user_name, $pass1, $mail, $authkey);
                 redirect("login.php?error=7");

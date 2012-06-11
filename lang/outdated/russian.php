@@ -1,6 +1,6 @@
 <?php
 /*
- * Project Name: MiniManager for Project Trinity
+ * Project Name: Minimanager for SkyfireEMU
  * License: GNU General Public License v2(GPL)
  * Language: Russian
  * Supported Minimanager Revision: 174

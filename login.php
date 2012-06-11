@@ -23,7 +23,7 @@ function dologin(&$sqlr)
     {
         $sql2 = new SQL;
         $sql2->connect($mmfpm_db['addr'], $mmfpm_db['user'], $mmfpm_db['pass'], $mmfpm_db['name']);
-        $query2_result = $sql2->query("SELECT * FROM mm_account WHERE username = '$user_name'");
+        $query2_result = $sql2->query("SELECT * FROM mmfs_account WHERE username = '$user_name'");
         if ($sql2->num_rows($query2_result) >= 1) 
         {
             $sql2->close;

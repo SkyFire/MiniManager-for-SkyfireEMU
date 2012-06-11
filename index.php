@@ -97,7 +97,7 @@ function front(&$sqlr, &$sqlc, &$sqlm)
     $sqlm = new SQL;
     $sqlm->connect($mmfpm_db['addr'], $mmfpm_db['user'], $mmfpm_db['pass'], $mmfpm_db['name']);
 
-    $all_record_m = $sqlm->result($sqlm->query('SELECT count(*) FROM mm_motd'), 0);
+    $all_record_m = $sqlm->result($sqlm->query('SELECT count(*) FROM mmfs_motd'), 0);
 
     if ($user_lvl >= $action_permission['delete'])
         $output .= '
@@ -122,7 +122,7 @@ function front(&$sqlr, &$sqlc, &$sqlm)
 
     if($all_record_m)
     {
-        $result = $sqlm->query('SELECT id, realmid, type, content FROM mm_motd WHERE realmid = '.$realm_id.' ORDER BY id DESC LIMIT '.$start_m.', 3');
+        $result = $sqlm->query('SELECT id, realmid, type, content FROM mmfs_motd WHERE realmid = '.$realm_id.' ORDER BY id DESC LIMIT '.$start_m.', 3');
         while($post = $sqlm->fetch_assoc($result))
         {
             $output .= '

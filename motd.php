@@ -61,7 +61,7 @@ function edit_motd(&$sqlm)
     else
         redirect('motd.php?error=1');
 
-    $msg = $sqlm->result($sqlm->query('SELECT content FROM mm_motd WHERE id = '.$id.''), 0);
+    $msg = $sqlm->result($sqlm->query('SELECT content FROM mmfs_motd WHERE id = '.$id.''), 0);
 
     $output .= '
                 <center>
@@ -116,7 +116,7 @@ function do_add_motd(&$sqlm)
 
     $by = date('m/d/y H:i:s').' Posted by: '.$user_name;
 
-    $sqlm->query('INSERT INTO mm_motd (realmid, type, content) VALUES (\''.$realm_id.'\', \''.$by.'\', \''.$msg.'\')');
+    $sqlm->query('INSERT INTO mmfs_motd (realmid, type, content) VALUES (\''.$realm_id.'\', \''.$by.'\', \''.$msg.'\')');
     unset($by);
     unset($msg);
     redirect('index.php');
@@ -143,11 +143,11 @@ function do_edit_motd(&$sqlm)
     if (4096 < strlen($msg))
         redirect('motd.php?error=2');
 
-    $by = $sqlm->result($sqlm->query('SELECT type FROM mm_motd WHERE id = '.$id.''), 0);
+    $by = $sqlm->result($sqlm->query('SELECT type FROM mmfs_motd WHERE id = '.$id.''), 0);
     $by = split('<br />', $by, 2);
     $by = $by[0].'<br />'.date('m/d/y H:i:s').' Edited by: '.$user_name;
 
-    $sqlm->query('UPDATE mm_motd SET realmid = \''.$realm_id.'\', type = \''.$by.'\', content = \''.$msg.'\' WHERE id = '.$id.'');
+    $sqlm->query('UPDATE mmfs_motd SET realmid = \''.$realm_id.'\', type = \''.$by.'\', content = \''.$msg.'\' WHERE id = '.$id.'');
     unset($by);
     unset($msg);
     unset($id);
@@ -171,7 +171,7 @@ function delete_motd(&$sqlm)
     else
         redirect('motd.php?error=1');
 
-    $sqlm->query('DELETE FROM mm_motd WHERE id ='.$id.'');
+    $sqlm->query('DELETE FROM mmfs_motd WHERE id ='.$id.'');
     unset($id);
     redirect('index.php');
 }

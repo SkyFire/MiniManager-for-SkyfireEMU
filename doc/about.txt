@@ -4,7 +4,7 @@ Original miniManager for Project MaNGOS Server by Q.SA
 
 ABOUT:
 
-   MiniManager for Project Trinity Server is a PHP, web front end that
+   Minimanager for SkyfireEMU Server is a PHP, web front end that
  provides easy access to manage Trinity servers. Manage/add/remove/edit/
  lock/ban/etc. user accounts, characters, database and server itself.
  It is a small, easy to use, flexible tool.
