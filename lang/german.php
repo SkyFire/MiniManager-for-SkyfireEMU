@@ -188,8 +188,6 @@ $lang_register = array(
   'referrer_not_found' => 'Der Spieler, der dich geworben hat, wurde nicht gefunden.<br/>Stelle bitte sicher, dass du einen g&uuml;ltigen Benutzernamen eingegeben hast.',
   );
 
-/** TODO -- Stand: 31.5.2012 - 17:57 Uhr **/
-
 // ----- INDEX.PHP -----
 function lang_index()
 {
@@ -212,9 +210,9 @@ function lang_index()
   'latency' => 'Latenzzeit',
   'a_latency' => 'Durchschnittliche Latenzzeit',
   'guild' => 'Gilde',
-  'trinity_rev' => 'Trinity Rev',
-  'using_db' => 'DB Version:',
-  'maxplayers' => 'Max Spieler w&auml;hrend dieser Laufzeit',
+  'skyfire_rev' => 'Skyfire Revision',
+  'using_db' => 'Datenbankversion:',
+  'maxplayers' => 'Maximale Anzahl der Spieler w&auml;hrend dieser Laufzeit',
   );
   return $lang_index;
 }
@@ -231,14 +229,14 @@ $lang_header = array
   'tools' => 'Werkzeuge',
   'db' => 'Datenbank',
   'system' => 'System',
-  'support' => 'Support',
+  'support' => 'Hilfe',
   'my_acc' => 'Profil',
 
   'auctionhouse' => 'Auktionshaus',
   'arena_teams' => 'Arena Teams',
   'guilds' => 'Gilden',
   'honor' => 'Ehre-Rangliste',
-  'top100' => 'TOP 100',
+  'top100' => 'Top 100',
   'statistics' => 'Statistik',
   'player_map' => 'Spielerkarte',
 
@@ -251,24 +249,24 @@ $lang_header = array
   'cleanup' => 'Aufr&auml;umen',
 
   'events' => 'Ereignisse',
-  'instances' => 'Instanz-Informationen',
+  'instances' => 'Instanzinformationen',
   'items' => 'Gegenst&auml;nde',
   'creatures' => 'Kreaturen',
   'game_object' => 'Spielobjekte',
-  'teleports' => 'Teleport-Punkte',
-  'backup' => 'Backup',
+  'teleports' => 'Teleportpunkte',
+  'backup' => 'Sicherung',
   'run_patch' => 'SQL Patch einspielen',
   'repair' => 'Reparieren/Optimieren',
 
   'realm' => 'Realm',
-  'add_motd' => 'MOTD hinzuf&uuml;gen',
+  'add_motd' => 'Nachricht des Tages hinzuf&uuml;gen',
   'spelld' => 'Deaktivierte(r) Zauber',
   'message' => 'Nachricht senden',
   'ssh_line' => 'SSH Zeile',
 
   'forums' => 'Forum',
   'irc' => 'IRC Applet',
-  'bugreport' => 'Bug Report',
+  'bugreport' => 'Fehler melden',
 
   // please check the length at 'My Account' Menu
   'realms' => '------Realms------',
@@ -308,7 +306,7 @@ function lang_repair()
   'status' => 'Status',
   'num_records' => 'Anzahl der Eintr&auml;ge',
   'tables' => 'Tabellen',
-  'select_tables' => 'W&auml;hlen Sie die Tabellen aus, die bearbeitet werden sollen.',
+  'select_tables' => 'W&auml;hle die Tabellen aus, die bearbeitet werden sollen.',
   'repair_error' => 'Fehler',
   );
   return $lang_repair;
@@ -317,8 +315,8 @@ function lang_repair()
 
 $lang_backup = array(
   // ----- BACKUP.PHP -----
-  'backup_options' => 'Backupoptionen',
-  'select_option' => 'W&auml;hle Backupoption',
+  'backup_options' => 'Sicherungsoptionen',
+  'select_option' => 'W&auml;hle Sicherungsoption',
   'save' => 'Speichern',
   'load' => 'Laden',
   'to_from' => 'auf/in/von/aus',
@@ -333,8 +331,8 @@ $lang_backup = array(
   'max_file_size' => 'Max. Gr&ouml;&szlig;e f&uuml;r Dateiupload',
   'use_ftp_for_large_files' => 'F&uuml;r gr&auml;&szlig;ere Volumen kannst du deine Backupdateien beliebiger Gr&ouml;&szlig;e<br /> per FTP in dein Backupverzeichnis hochladen',
   'upload' => 'Hochladen',
-  'upload_sql_file_only' => 'Da kannst nur .sql oder .qbquery Dateien hochladen.',
-  'upload_err_write_permission' => 'Konnte Datei nicht hochladen<br />&Uuml;berpr&uuml;fe Verzeichnisberechtigung f&uuml;r',
+  'upload_sql_file_only' => 'Du kannst nur .sql oder .qbquery Dateien hochladen.',
+  'upload_err_write_permission' => 'Konnte Datei nicht hochladen<br />&Uuml;berpr&uuml;fe die Verzeichnisberechtigung!',
   'file_not_found' => 'Datei nicht gefunden!',
   'file_write_err' => 'Konnte nicht in Datei schreiben!',
   'backup_finished' => 'Backup erfolgreich beendet',
@@ -345,6 +343,7 @@ $lang_backup = array(
   'save_all_realms' => 'Speichere Daten von allen Realms',
   );
 
+/** Stand 11.6.2012-20:40Uhr BY MYTHOS **/
 
   // ----- BANNED.PHP -----
 function lang_banned()
