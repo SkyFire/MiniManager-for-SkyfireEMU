@@ -41,7 +41,7 @@ function instances()
 
     // main data that we need for this page, instances
     $result = $sqlw->query('SELECT map, level_min, level_max
-                            FROM instance_template JOIN access_requirement ON access_requirement.id = instance_template.access_id
+                            FROM instance_template JOIN access_requirement ON access_requirement.mapId = instance_template.map
                             ORDER BY '.$order_by.' '.$order_dir.' LIMIT '.$start.', '.$itemperpage.';');
 
     /*---------------Page Specific Data Starts Here--------------------------
